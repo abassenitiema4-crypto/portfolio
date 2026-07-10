@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -66,22 +67,24 @@
   }
   .nav-inner{
     max-width:var(--maxw); margin:0 auto; padding:18px 32px;
-    display:flex; align-items:center; justify-content:space-between;
+    display:flex; align-items:center; justify-content:space-between; gap:20px;
   }
   .brand{
     font-family:'Fraunces', serif; font-weight:600; font-size:18px;
-    letter-spacing:0.01em;
+    letter-spacing:0.01em; white-space:nowrap;
   }
   .brand span{ color:var(--sand); }
-  nav.links{ display:flex; gap:28px; font-size:14px; }
+  nav.links{ display:flex; gap:24px; font-size:14px; }
   nav.links a{
     text-decoration:none; color:var(--paper-dim);
     transition:color .2s ease;
     font-family:'IBM Plex Mono', monospace;
     font-size:12.5px;
     letter-spacing:0.03em;
+    white-space:nowrap;
   }
   nav.links a:hover{ color:var(--sand); }
+  .nav-right{ display:flex; align-items:center; gap:14px; }
   .nav-cta{
     border:1px solid var(--sand); color:var(--sand);
     padding:8px 16px; text-decoration:none;
@@ -91,6 +94,17 @@
     white-space:nowrap;
   }
   .nav-cta:hover{ background:var(--sand); color:var(--ink); }
+  .lang-switch{
+    display:flex; border:1px solid var(--line); font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px; letter-spacing:0.04em; overflow:hidden; flex-shrink:0;
+  }
+  .lang-switch button{
+    background:transparent; border:none; color:var(--paper-faint);
+    padding:7px 11px; cursor:pointer; font-family:inherit; font-size:inherit; letter-spacing:inherit;
+    transition: all .2s ease;
+  }
+  .lang-switch button.active{ background:var(--sand); color:var(--ink); font-weight:600; }
+  .lang-switch button:not(.active):hover{ color:var(--paper); }
   @media (max-width:780px){ nav.links{ display:none; } }
 
   /* HERO */
@@ -258,16 +272,22 @@
 
 <header class="nav">
   <div class="nav-inner">
-    <div class="brand">NITIEMA <span>·</span> communication + automatisation</div>
+    <div class="brand">NITIEMA <span>·</span> <span data-i18n="nav-tagline">communication + automatisation</span></div>
     <nav class="links">
-      <a href="#apropos">À propos</a>
-      <a href="#competences">Compétences</a>
-      <a href="#realisations">Réalisations</a>
-      <a href="#missions">Missions</a>
-      <a href="#outils">Outils</a>
-      <a href="#presence">Présence</a>
+      <a href="#apropos" data-i18n="nav-apropos">À propos</a>
+      <a href="#competences" data-i18n="nav-competences">Compétences</a>
+      <a href="#realisations" data-i18n="nav-realisations">Réalisations</a>
+      <a href="#missions" data-i18n="nav-missions">Missions</a>
+      <a href="#outils" data-i18n="nav-outils">Outils</a>
+      <a href="#presence" data-i18n="nav-presence">Présence</a>
     </nav>
-    <a class="nav-cta" href="mailto:abassenitiema4@gmail.com">Me contacter</a>
+    <div class="nav-right">
+      <div class="lang-switch">
+        <button type="button" data-lang-btn="fr" class="active">FR</button>
+        <button type="button" data-lang-btn="en">EN</button>
+      </div>
+      <a class="nav-cta" href="mailto:abassenitiema4@gmail.com" data-i18n="nav-contact">Me contacter</a>
+    </div>
   </div>
 </header>
 
@@ -277,16 +297,16 @@
     <div class="wrap hero-grid">
       <div>
         <div class="eyebrow">Abasse Nitiema — Ouagadougou, Burkina Faso</div>
-        <h1>Je conçois des messages qui portent, <em>puis je construis les systèmes</em> qui les diffusent sans épuiser l'équipe.</h1>
-        <p class="lead">Spécialiste en communication institutionnelle, marketing digital et automatisation par l'IA. Depuis 2019, je fais dialoguer la rigueur d'un cabinet certifié ISO avec les outils qui font gagner du temps — Python, API, assistants IA.</p>
+        <h1 data-i18n="hero-h1">Je conçois des messages qui portent, <em>puis je construis les systèmes</em> qui les diffusent sans épuiser l'équipe.</h1>
+        <p class="lead" data-i18n="hero-lead">Spécialiste en communication institutionnelle, marketing digital et automatisation par l'IA. Depuis 2019, je fais dialoguer la rigueur d'un cabinet certifié ISO avec les outils qui font gagner du temps — Python, API, assistants IA.</p>
         <div class="hero-ctas">
-          <a class="btn-primary" href="mailto:abassenitiema4@gmail.com">Discuter d'une collaboration</a>
-          <a class="btn-ghost" href="https://linkedin.com/in/abasse-nitiema" target="_blank" rel="noopener">Profil LinkedIn ↗</a>
+          <a class="btn-primary" href="mailto:abassenitiema4@gmail.com" data-i18n="hero-cta-primary">Discuter d'une collaboration</a>
+          <a class="btn-ghost" href="https://linkedin.com/in/abasse-nitiema" target="_blank" rel="noopener" data-i18n="hero-cta-linkedin">Profil LinkedIn ↗</a>
         </div>
       </div>
 
       <div class="chain-card">
-        <div class="cap">Comment je travaille — une chaîne, pas des tâches isolées</div>
+        <div class="cap" data-i18n="chain-cap">Comment je travaille — une chaîne, pas des tâches isolées</div>
         <svg class="chain" viewBox="0 0 460 260" xmlns="http://www.w3.org/2000/svg">
           <path id="chainpath" d="M40,40 C120,40 90,120 170,120 S220,200 300,200 S380,120 420,120"
                 fill="none" stroke="rgba(242,239,233,0.18)" stroke-width="1.5" stroke-dasharray="3 5"/>
@@ -295,23 +315,23 @@
 
           <g>
             <circle cx="40" cy="40" r="7" fill="#0E1B2E" stroke="#E3A857" stroke-width="2"/>
-            <text x="40" y="20" text-anchor="middle" class="chain-node-label">Stratégie</text>
-            <text x="40" y="65" text-anchor="middle" class="chain-label">brief · audience</text>
+            <text x="40" y="20" text-anchor="middle" class="chain-node-label" data-i18n="chain-strategie">Stratégie</text>
+            <text x="40" y="65" text-anchor="middle" class="chain-label" data-i18n="chain-strategie-sub">brief · audience</text>
           </g>
           <g>
             <circle cx="170" cy="120" r="7" fill="#0E1B2E" stroke="#E3A857" stroke-width="2"/>
-            <text x="170" y="100" text-anchor="middle" class="chain-node-label">Contenu</text>
-            <text x="170" y="145" text-anchor="middle" class="chain-label">rédaction · visuel</text>
+            <text x="170" y="100" text-anchor="middle" class="chain-node-label" data-i18n="chain-contenu">Contenu</text>
+            <text x="170" y="145" text-anchor="middle" class="chain-label" data-i18n="chain-contenu-sub">rédaction · visuel</text>
           </g>
           <g>
             <circle cx="300" cy="200" r="7" fill="#0E1B2E" stroke="#5FB8A0" stroke-width="2"/>
-            <text x="300" y="225" text-anchor="middle" class="chain-node-label">Automatisation</text>
+            <text x="300" y="225" text-anchor="middle" class="chain-node-label" data-i18n="chain-automatisation">Automatisation</text>
             <text x="300" y="245" text-anchor="middle" class="chain-label">Python · API · IA</text>
           </g>
           <g>
             <circle cx="420" cy="120" r="7" fill="#0E1B2E" stroke="#5FB8A0" stroke-width="2"/>
-            <text x="420" y="100" text-anchor="middle" class="chain-node-label">Mesure</text>
-            <text x="420" y="145" text-anchor="middle" class="chain-label">KPI · itération</text>
+            <text x="420" y="100" text-anchor="middle" class="chain-node-label" data-i18n="chain-mesure">Mesure</text>
+            <text x="420" y="145" text-anchor="middle" class="chain-label" data-i18n="chain-mesure-sub">KPI · itération</text>
           </g>
         </svg>
       </div>
@@ -321,17 +341,17 @@
   <section id="apropos">
     <div class="wrap about-grid">
       <div>
-        <div class="eyebrow">À propos</div>
-        <h2 style="margin:14px 0 20px; font-size:28px;">Un pied dans la rigueur institutionnelle, un pied dans l'outillage moderne.</h2>
-        <p>Depuis 2019, je pilote la communication du cabinet <strong>Building Business</strong> — conseil, formation et études, certifié <strong>ISO 9001</strong> et <strong>ISO 21001</strong>, présent au Burkina Faso, au Maroc et en Côte d'Ivoire.</p>
-        <p>Ce cadre m'a appris à écrire pour des partenaires exigeants — agences de développement, ministères, entreprises publiques — et à structurer des dossiers d'appels d'offres qui tiennent la route. En parallèle, j'ai construit ma propre pratique de l'automatisation : scripts Python, API Mailchimp, agents IA, pour que la partie répétitive du métier libère du temps pour la partie stratégique.</p>
-        <p>Titulaire d'un <strong>Master en communication digitale stratégique</strong> (2025), je continue à documenter cette double compétence — communication et systèmes — comme le fil conducteur de mon travail.</p>
+        <div class="eyebrow" data-i18n="about-eyebrow">À propos</div>
+        <h2 style="margin:14px 0 20px; font-size:28px;" data-i18n="about-h2">Un pied dans la rigueur institutionnelle, un pied dans l'outillage moderne.</h2>
+        <p data-i18n="about-p1">Depuis 2019, je pilote la communication du cabinet <strong>Building Business</strong> — conseil, formation et études, certifié <strong>ISO 9001</strong> et <strong>ISO 21001</strong>, présent au Burkina Faso, au Maroc et en Côte d'Ivoire.</p>
+        <p data-i18n="about-p2">Ce cadre m'a appris à écrire pour des partenaires exigeants — agences de développement, ministères, entreprises publiques — et à structurer des dossiers d'appels d'offres qui tiennent la route. En parallèle, j'ai construit ma propre pratique de l'automatisation : scripts Python, API Mailchimp, agents IA, pour que la partie répétitive du métier libère du temps pour la partie stratégique.</p>
+        <p data-i18n="about-p3">Titulaire d'un <strong>Master en communication digitale stratégique</strong> (2025), je continue à documenter cette double compétence — communication et systèmes — comme le fil conducteur de mon travail.</p>
       </div>
       <div class="stat-list">
-        <div class="stat"><div class="n">2019</div><div class="l">DÉBUT DE MON PARCOURS EN COMMUNICATION DIGITALE & INSTITUTIONNELLE</div></div>
-        <div class="stat"><div class="n">100+</div><div class="l">SESSIONS DE FORMATION COORDONNÉES — SUIVI QUALITÉ (2019–2026)</div></div>
-        <div class="stat"><div class="n">10+</div><div class="l">APPELS D'OFFRES REMPORTÉS DEPUIS 2021</div></div>
-        <div class="stat"><div class="n">11</div><div class="l">SESSIONS DE FORMATION ANIMÉES PERSONNELLEMENT</div></div>
+        <div class="stat"><div class="n">2019</div><div class="l" data-i18n="stat1-l">DÉBUT DE MON PARCOURS EN COMMUNICATION DIGITALE & INSTITUTIONNELLE</div></div>
+        <div class="stat"><div class="n">100+</div><div class="l" data-i18n="stat2-l">SESSIONS DE FORMATION COORDONNÉES — SUIVI QUALITÉ (2019–2026)</div></div>
+        <div class="stat"><div class="n">10+</div><div class="l" data-i18n="stat3-l">APPELS D'OFFRES REMPORTÉS DEPUIS 2021</div></div>
+        <div class="stat"><div class="n">11</div><div class="l" data-i18n="stat4-l">SESSIONS DE FORMATION ANIMÉES PERSONNELLEMENT</div></div>
       </div>
     </div>
   </section>
@@ -340,42 +360,42 @@
     <div class="wrap">
       <div class="section-head">
         <div>
-          <div class="eyebrow">Ce que je fais</div>
-          <h2>Trois compétences qui se renforcent l'une l'autre</h2>
+          <div class="eyebrow" data-i18n="comp-eyebrow">Ce que je fais</div>
+          <h2 data-i18n="comp-h2">Trois compétences qui se renforcent l'une l'autre</h2>
         </div>
       </div>
       <div class="pillars">
         <div class="pillar">
-          <span class="tag">01 · Communication</span>
-          <h3>Communication & marketing digital</h3>
+          <span class="tag" data-i18n="pillar1-tag">01 · Communication</span>
+          <h3 data-i18n="pillar1-h3">Communication & marketing digital</h3>
           <ul>
-            <li>Stratégie de communication institutionnelle et digitale</li>
-            <li>Sites web sous WordPress & Joomla</li>
-            <li>Campagnes Ads : Facebook, LinkedIn, TikTok</li>
-            <li>Création de contenu : visuels, brochures, vidéo</li>
-            <li>Suivi de performance & rapports analytiques</li>
+            <li data-i18n="p1-li1">Stratégie de communication institutionnelle et digitale</li>
+            <li data-i18n="p1-li2">Sites web sous WordPress & Joomla</li>
+            <li data-i18n="p1-li3">Campagnes Ads : Facebook, LinkedIn, TikTok</li>
+            <li data-i18n="p1-li4">Création de contenu : visuels, brochures, vidéo</li>
+            <li data-i18n="p1-li5">Suivi de performance & rapports analytiques</li>
           </ul>
         </div>
         <div class="pillar">
-          <span class="tag">02 · Systèmes</span>
-          <h3>Automatisation & IA</h3>
+          <span class="tag" data-i18n="pillar2-tag">02 · Systèmes</span>
+          <h3 data-i18n="pillar2-h3">Automatisation & IA</h3>
           <ul>
-            <li>Scripts Python pour processus répétitifs</li>
-            <li>Automatisation web via Playwright</li>
-            <li>Campagnes email pilotées par l'API Mailchimp</li>
-            <li>Workflows combinant Claude, ChatGPT & outils métier</li>
-            <li>Génération automatisée de documents (Word, Excel, slides)</li>
+            <li data-i18n="p2-li1">Scripts Python pour processus répétitifs</li>
+            <li data-i18n="p2-li2">Automatisation web via Playwright</li>
+            <li data-i18n="p2-li3">Campagnes email pilotées par l'API Mailchimp</li>
+            <li data-i18n="p2-li4">Workflows combinant Claude, ChatGPT & outils métier</li>
+            <li data-i18n="p2-li5">Génération automatisée de documents (Word, Excel, slides)</li>
           </ul>
         </div>
         <div class="pillar">
-          <span class="tag">03 · Structure</span>
-          <h3>Ingénierie de la formation & qualité</h3>
+          <span class="tag" data-i18n="pillar3-tag">03 · Structure</span>
+          <h3 data-i18n="pillar3-h3">Ingénierie de la formation & qualité</h3>
           <ul>
-            <li>Conception et animation de formations continues</li>
-            <li>Évaluation des acquis et suivi post-formation</li>
-            <li>Montage de dossiers pour appels d'offres nationaux et internationaux</li>
-            <li>Connaissances pratiques ISO 9001 / ISO 21001 / ISO 29993</li>
-            <li>Audit qualité interne et externe</li>
+            <li data-i18n="p3-li1">Conception et animation de formations continues</li>
+            <li data-i18n="p3-li2">Évaluation des acquis et suivi post-formation</li>
+            <li data-i18n="p3-li3">Montage de dossiers pour appels d'offres nationaux et internationaux</li>
+            <li data-i18n="p3-li4">Connaissances pratiques ISO 9001 / ISO 21001 / ISO 29993</li>
+            <li data-i18n="p3-li5">Audit qualité interne et externe</li>
           </ul>
         </div>
       </div>
@@ -386,8 +406,8 @@
     <div class="wrap">
       <div class="section-head">
         <div>
-          <div class="eyebrow">Réalisations sélectionnées</div>
-          <h2>Quelques cas concrets</h2>
+          <div class="eyebrow" data-i18n="real-eyebrow">Réalisations sélectionnées</div>
+          <h2 data-i18n="real-h2">Quelques cas concrets</h2>
         </div>
       </div>
       <div class="cases">
@@ -395,12 +415,12 @@
         <div class="case">
           <div class="meta">2026<span class="org">Building Business</span></div>
           <div>
-            <h3>Campagne de promotion — Certification PMP®</h3>
-            <p>Conception de campagnes emailing HTML itératives (testées et affinées envoi après envoi), création des visuels Facebook, refonte du flyer et segmentation des prospects selon leur avancement dans le tunnel de décision — pour clarifier le choix entre les deux formules proposées.</p>
+            <h3 data-i18n="case1-h3">Campagne de promotion — Certification PMP®</h3>
+            <p data-i18n="case1-p">Conception de campagnes emailing HTML itératives (testées et affinées envoi après envoi), création des visuels Facebook, refonte du flyer et segmentation des prospects selon leur avancement dans le tunnel de décision — pour clarifier le choix entre les deux formules proposées.</p>
             <div class="pill-row">
               <span class="pill">Mailchimp HTML</span>
               <span class="pill">Facebook Ads</span>
-              <span class="pill">Segmentation</span>
+              <span class="pill" data-i18n="case1-pill3">Segmentation</span>
             </div>
           </div>
         </div>
@@ -408,8 +428,8 @@
         <div class="case">
           <div class="meta">2019–2026<span class="org">Building Business</span></div>
           <div>
-            <h3>Automatisation des campagnes de formation internationales</h3>
-            <p>Développement de scripts Python couplés à l'API Mailchimp pour segmenter les bases de contacts et déclencher des campagnes personnalisées sans intervention manuelle répétitive, sur des programmes de formation réunissant plusieurs centaines de prospects.</p>
+            <h3 data-i18n="case2-h3">Automatisation des campagnes de formation internationales</h3>
+            <p data-i18n="case2-p">Développement de scripts Python couplés à l'API Mailchimp pour segmenter les bases de contacts et déclencher des campagnes personnalisées sans intervention manuelle répétitive, sur des programmes de formation réunissant plusieurs centaines de prospects.</p>
             <div class="pill-row">
               <span class="pill">Python</span>
               <span class="pill">Mailchimp API</span>
@@ -421,12 +441,12 @@
         <div class="case">
           <div class="meta">2021–2026<span class="org">Building Business</span></div>
           <div>
-            <h3>Constitution de dossiers d'appels d'offres</h3>
-            <p>Montage, pour le compte du cabinet Building Business, des propositions techniques et financières en réponse aux appels d'offres lancés par des institutions publiques et privées, nationales et internationales, des agences de développement et des ONG — plus d'une dizaine remportés depuis 2021, dont Enabel (Niger, Guinée), l'Agence Nationale du Service Universel des Télécommunications et du Numérique (ANSUTEN, Guinée), l'Office National de l'Eau et de l'Assainissement (ONEA) et la Confédération des Institutions Financières Afrique de l'Ouest (CIF-AO). Coordination de la mise en œuvre et du suivi post-formation une fois le marché remporté.</p>
+            <h3 data-i18n="case3-h3">Constitution de dossiers d'appels d'offres</h3>
+            <p data-i18n="case3-p">Montage, pour le compte du cabinet Building Business, des propositions techniques et financières en réponse aux appels d'offres lancés par des institutions publiques et privées, nationales et internationales, des agences de développement et des ONG — plus d'une dizaine remportés depuis 2021, dont Enabel (Niger, Guinée), l'Agence Nationale du Service Universel des Télécommunications et du Numérique (ANSUTEN, Guinée), l'Office National de l'Eau et de l'Assainissement (ONEA) et la Confédération des Institutions Financières Afrique de l'Ouest (CIF-AO). Coordination de la mise en œuvre et du suivi post-formation une fois le marché remporté.</p>
             <div class="pill-row">
-              <span class="pill">Rédaction technique</span>
-              <span class="pill">Coordination</span>
-              <span class="pill">Suivi post-formation</span>
+              <span class="pill" data-i18n="case3-pill1">Rédaction technique</span>
+              <span class="pill" data-i18n="case3-pill2">Coordination</span>
+              <span class="pill" data-i18n="case3-pill3">Suivi post-formation</span>
             </div>
           </div>
         </div>
@@ -434,12 +454,12 @@
         <div class="case">
           <div class="meta">2021–2025<span class="org">Building Business</span></div>
           <div>
-            <h3>Formations digitales animées auprès de professionnels</h3>
-            <p>Conception et animation de 11 sessions sur le marketing de contenu, la stratégie réseaux sociaux, l'email marketing et l'intelligence artificielle appliquée au marketing digital, pour des cohortes de professionnels en formation continue.</p>
+            <h3 data-i18n="case4-h3">Formations digitales animées auprès de professionnels</h3>
+            <p data-i18n="case4-p">Conception et animation de 11 sessions sur le marketing de contenu, la stratégie réseaux sociaux, l'email marketing et l'intelligence artificielle appliquée au marketing digital, pour des cohortes de professionnels en formation continue.</p>
             <div class="pill-row">
-              <span class="pill">Andragogie</span>
-              <span class="pill">IA & marketing</span>
-              <span class="pill">Réseaux sociaux</span>
+              <span class="pill" data-i18n="case4-pill1">Andragogie</span>
+              <span class="pill" data-i18n="case4-pill2">IA & marketing</span>
+              <span class="pill" data-i18n="case4-pill3">Réseaux sociaux</span>
             </div>
           </div>
         </div>
@@ -452,43 +472,43 @@
     <div class="wrap">
       <div class="section-head">
         <div>
-          <div class="eyebrow">Missions & partenaires</div>
-          <h2>Un échantillon des dossiers remportés</h2>
+          <div class="eyebrow" data-i18n="missions-eyebrow">Missions & partenaires</div>
+          <h2 data-i18n="missions-h2">Un échantillon des dossiers remportés</h2>
         </div>
       </div>
       <table class="mandates">
         <thead>
-          <tr><th>Mission</th><th>Bénéficiaire</th><th>Année</th></tr>
+          <tr><th data-i18n="th-mission">Mission</th><th data-i18n="th-beneficiaire">Bénéficiaire</th><th data-i18n="th-annee">Année</th></tr>
         </thead>
         <tbody>
           <tr>
-            <td>Suivi post-formation des cadres centraux — management & communication</td>
-            <td class="org">Enabel Niger — Projet Sarraounia 2</td>
+            <td data-i18n="mission1">Suivi post-formation des cadres centraux — management & communication</td>
+            <td class="org" data-i18n="org1">Enabel Niger — Projet Sarraounia 2</td>
             <td class="year">2026</td>
           </tr>
           <tr>
-            <td>Formation aux métiers TIC pour 130 étudiants (Labé, Mamou, Conakry)</td>
-            <td class="org">Agence Nationale du Service Universel des Télécommunications et du Numérique (ANSUTEN) — Guinée</td>
+            <td data-i18n="mission2">Formation aux métiers TIC pour 130 étudiants (Labé, Mamou, Conakry)</td>
+            <td class="org" data-i18n="org2">Agence Nationale du Service Universel des Télécommunications et du Numérique (ANSUTEN) — Guinée</td>
             <td class="year">2026</td>
           </tr>
           <tr>
-            <td>Environnement de développement collaboratif Odoo & formation des équipes IT</td>
-            <td class="org">Office National de l'Eau et de l'Assainissement (ONEA) — Burkina Faso</td>
+            <td data-i18n="mission3">Environnement de développement collaboratif Odoo & formation des équipes IT</td>
+            <td class="org" data-i18n="org3">Office National de l'Eau et de l'Assainissement (ONEA) — Burkina Faso</td>
             <td class="year">2026</td>
           </tr>
           <tr>
-            <td>Team building et plan de développement des compétences</td>
-            <td class="org">Confédération des Institutions Financières Afrique de l'Ouest (CIF-AO)</td>
+            <td data-i18n="mission4">Team building et plan de développement des compétences</td>
+            <td class="org" data-i18n="org4">Confédération des Institutions Financières Afrique de l'Ouest (CIF-AO)</td>
             <td class="year">2024</td>
           </tr>
           <tr>
-            <td>Formation en finance islamique des instances de gouvernance</td>
-            <td class="org">Haute Autorité du WAQF — Niger</td>
+            <td data-i18n="mission5">Formation en finance islamique des instances de gouvernance</td>
+            <td class="org" data-i18n="org5">Haute Autorité du WAQF — Niger</td>
             <td class="year">2023</td>
           </tr>
           <tr>
-            <td>Renforcement des capacités IT en système, réseau & sécurité informatique</td>
-            <td class="org">Agence Nationale de Promotion des TIC — Burkina Faso</td>
+            <td data-i18n="mission6">Renforcement des capacités IT en système, réseau & sécurité informatique</td>
+            <td class="org" data-i18n="org6">Agence Nationale de Promotion des TIC — Burkina Faso</td>
             <td class="year">2022</td>
           </tr>
         </tbody>
@@ -500,13 +520,13 @@
     <div class="wrap">
       <div class="section-head">
         <div>
-          <div class="eyebrow">Boîte à outils</div>
-          <h2>Ce que j'utilise au quotidien</h2>
+          <div class="eyebrow" data-i18n="outils-eyebrow">Boîte à outils</div>
+          <h2 data-i18n="outils-h2">Ce que j'utilise au quotidien</h2>
         </div>
       </div>
       <div class="tool-groups">
         <div>
-          <h4>IA & automatisation</h4>
+          <h4 data-i18n="tools-h4-1">IA & automatisation</h4>
           <ul>
             <li>Claude · ChatGPT</li>
             <li>Python · Playwright</li>
@@ -515,7 +535,7 @@
           </ul>
         </div>
         <div>
-          <h4>Digital & réseaux sociaux</h4>
+          <h4 data-i18n="tools-h4-2">Digital & réseaux sociaux</h4>
           <ul>
             <li>Facebook Business Manager</li>
             <li>LinkedIn Ads & Sales Navigator</li>
@@ -524,7 +544,7 @@
           </ul>
         </div>
         <div>
-          <h4>CMS & création</h4>
+          <h4 data-i18n="tools-h4-3">CMS & création</h4>
           <ul>
             <li>WordPress (Divi)</li>
             <li>Joomla</li>
@@ -533,7 +553,7 @@
           </ul>
         </div>
         <div>
-          <h4>Qualité & productivité</h4>
+          <h4 data-i18n="tools-h4-4">Qualité & productivité</h4>
           <ul>
             <li>ISO 9001 / 21001 / 29993</li>
             <li>Notion AI</li>
@@ -549,28 +569,28 @@
     <div class="wrap">
       <div class="section-head">
         <div>
-          <div class="eyebrow">Preuves à l'appui</div>
-          <h2>Ce que je gère au quotidien</h2>
+          <div class="eyebrow" data-i18n="presence-eyebrow">Preuves à l'appui</div>
+          <h2 data-i18n="presence-h2">Ce que je gère au quotidien</h2>
         </div>
       </div>
       <div class="pillars">
         <div class="pillar">
-          <span class="tag">Site web</span>
+          <span class="tag" data-i18n="presence-tag1">Site web</span>
           <h3>building-business.net</h3>
-          <p style="font-size:14.5px; color:var(--paper-dim); margin:0 0 16px;">Site institutionnel du cabinet, administré sous CMS (contenus, articles, mise à jour des offres de formation).</p>
-          <a class="btn-ghost" style="display:inline-flex;" href="https://building-business.net/index.php/fr/" target="_blank" rel="noopener">Voir le site ↗</a>
+          <p style="font-size:14.5px; color:var(--paper-dim); margin:0 0 16px;" data-i18n="presence-p1">Site institutionnel du cabinet, administré sous CMS (contenus, articles, mise à jour des offres de formation).</p>
+          <a class="btn-ghost" style="display:inline-flex;" href="https://building-business.net/index.php/fr/" target="_blank" rel="noopener" data-i18n="presence-link1">Voir le site ↗</a>
         </div>
         <div class="pillar">
           <span class="tag">Facebook</span>
           <h3>Building Business</h3>
-          <p style="font-size:14.5px; color:var(--paper-dim); margin:0 0 16px;">Page officielle du cabinet — visuels de campagnes, annonces de sessions, contenus de marque.</p>
-          <a class="btn-ghost" style="display:inline-flex;" href="https://web.facebook.com/buildingbusinessformation/?locale=fr_FR" target="_blank" rel="noopener">Voir la page ↗</a>
+          <p style="font-size:14.5px; color:var(--paper-dim); margin:0 0 16px;" data-i18n="presence-p2">Page officielle du cabinet — visuels de campagnes, annonces de sessions, contenus de marque.</p>
+          <a class="btn-ghost" style="display:inline-flex;" href="https://web.facebook.com/buildingbusinessformation/?locale=fr_FR" target="_blank" rel="noopener" data-i18n="presence-link2">Voir la page ↗</a>
         </div>
         <div class="pillar">
           <span class="tag">LinkedIn</span>
           <h3>Building Business</h3>
-          <p style="font-size:14.5px; color:var(--paper-dim); margin:0 0 16px;">Page entreprise LinkedIn — communication institutionnelle et positionnement du cabinet.</p>
-          <a class="btn-ghost" style="display:inline-flex;" href="https://www.linkedin.com/company/buildingbusinessformation/?viewAsMember=true" target="_blank" rel="noopener">Voir la page ↗</a>
+          <p style="font-size:14.5px; color:var(--paper-dim); margin:0 0 16px;" data-i18n="presence-p3">Page entreprise LinkedIn — communication institutionnelle et positionnement du cabinet.</p>
+          <a class="btn-ghost" style="display:inline-flex;" href="https://www.linkedin.com/company/buildingbusinessformation/?viewAsMember=true" target="_blank" rel="noopener" data-i18n="presence-link3">Voir la page ↗</a>
         </div>
       </div>
     </div>
@@ -579,9 +599,9 @@
   <footer id="contact">
     <div class="wrap">
       <div class="contact-box">
-        <div class="eyebrow" style="justify-content:center;">Discutons</div>
-        <h2>Une communication qui tient la route, et les systèmes pour la faire vivre.</h2>
-        <p>Disponible pour un poste en communication institutionnelle, marketing digital ou un mandat de conseil — au Burkina Faso ou ailleurs.</p>
+        <div class="eyebrow" style="justify-content:center;" data-i18n="footer-eyebrow">Discutons</div>
+        <h2 data-i18n="footer-h2">Une communication qui tient la route, et les systèmes pour la faire vivre.</h2>
+        <p data-i18n="footer-p">Disponible pour un poste en communication institutionnelle, marketing digital ou un mandat de conseil — au Burkina Faso ou ailleurs.</p>
         <div class="contact-links">
           <a class="btn-primary" href="mailto:abassenitiema4@gmail.com">abassenitiema4@gmail.com</a>
           <a class="btn-ghost" href="https://wa.me/22672919005" target="_blank" rel="noopener">+226 72 91 90 05</a>
@@ -590,12 +610,149 @@
       </div>
       <div class="foot-meta">
         <span>Abasse Nitiema — Ouagadougou, Burkina Faso</span>
-        <span>Mis à jour · 2026</span>
+        <span data-i18n="footmeta-updated">Mis à jour · 2026</span>
       </div>
     </div>
   </footer>
 
 </main>
+
+<script>
+  const translations = {
+    "nav-tagline": {en:"communication + automation"},
+    "nav-apropos": {en:"About"},
+    "nav-competences": {en:"Skills"},
+    "nav-realisations": {en:"Work"},
+    "nav-missions": {en:"Mandates"},
+    "nav-outils": {en:"Tools"},
+    "nav-presence": {en:"Online"},
+    "nav-contact": {en:"Get in touch"},
+    "hero-h1": {en:"I design messages that land, <em>then I build the systems</em> that spread them without burning out the team."},
+    "hero-lead": {en:"Institutional communication, digital marketing and AI-driven automation specialist. Since 2019, I've bridged the rigor of an ISO-certified firm with the tools that save time — Python, APIs, AI assistants."},
+    "hero-cta-primary": {en:"Let's talk about working together"},
+    "hero-cta-linkedin": {en:"LinkedIn profile ↗"},
+    "chain-cap": {en:"How I work — a chain, not isolated tasks"},
+    "chain-strategie": {en:"Strategy"},
+    "chain-strategie-sub": {en:"brief · audience"},
+    "chain-contenu": {en:"Content"},
+    "chain-contenu-sub": {en:"writing · visuals"},
+    "chain-automatisation": {en:"Automation"},
+    "chain-mesure": {en:"Measurement"},
+    "chain-mesure-sub": {en:"KPIs · iteration"},
+    "about-eyebrow": {en:"About"},
+    "about-h2": {en:"One foot in institutional rigor, one in modern tooling."},
+    "about-p1": {en:"Since 2019, I've led communication for Building Business — a consulting, training and studies firm certified <strong>ISO 9001</strong> and <strong>ISO 21001</strong>, present in Burkina Faso, Morocco and Côte d'Ivoire."},
+    "about-p2": {en:"That environment taught me to write for demanding partners — development agencies, ministries, public institutions — and to structure tender proposals that hold up. Alongside that, I built my own automation practice: Python scripts, the Mailchimp API, AI agents, so the repetitive part of the job frees up time for the strategic part."},
+    "about-p3": {en:"Holder of a <strong>Master's in strategic digital communication</strong> (2025), I keep documenting this dual skill set — communication and systems — as the throughline of my work."},
+    "stat1-l": {en:"START OF MY CAREER IN DIGITAL & INSTITUTIONAL COMMUNICATION"},
+    "stat2-l": {en:"TRAINING SESSIONS COORDINATED — QUALITY OVERSIGHT (2019–2026)"},
+    "stat3-l": {en:"TENDERS WON SINCE 2021"},
+    "stat4-l": {en:"TRAINING SESSIONS PERSONALLY FACILITATED"},
+    "comp-eyebrow": {en:"What I do"},
+    "comp-h2": {en:"Three skills that reinforce one another"},
+    "pillar1-tag": {en:"01 · Communication"},
+    "pillar1-h3": {en:"Communication & digital marketing"},
+    "p1-li1": {en:"Institutional and digital communication strategy"},
+    "p1-li2": {en:"Websites on WordPress & Joomla"},
+    "p1-li3": {en:"Ad campaigns: Facebook, LinkedIn, TikTok"},
+    "p1-li4": {en:"Content creation: visuals, brochures, video"},
+    "p1-li5": {en:"Performance tracking & analytics reporting"},
+    "pillar2-tag": {en:"02 · Systems"},
+    "pillar2-h3": {en:"Automation & AI"},
+    "p2-li1": {en:"Python scripts for repetitive processes"},
+    "p2-li2": {en:"Web automation via Playwright"},
+    "p2-li3": {en:"Email campaigns driven by the Mailchimp API"},
+    "p2-li4": {en:"Workflows combining Claude, ChatGPT & business tools"},
+    "p2-li5": {en:"Automated document generation (Word, Excel, slides)"},
+    "pillar3-tag": {en:"03 · Structure"},
+    "pillar3-h3": {en:"Training engineering & quality"},
+    "p3-li1": {en:"Design and delivery of continuing-education courses"},
+    "p3-li2": {en:"Learning assessment and post-training follow-up"},
+    "p3-li3": {en:"Building proposals for national and international tenders"},
+    "p3-li4": {en:"Working knowledge of ISO 9001 / ISO 21001 / ISO 29993"},
+    "p3-li5": {en:"Internal and external quality audits"},
+    "real-eyebrow": {en:"Selected work"},
+    "real-h2": {en:"A few concrete cases"},
+    "case1-h3": {en:"Promotional campaign — PMP® Certification"},
+    "case1-p": {en:"Design of iterative HTML email campaigns (tested and refined send after send), creation of Facebook visuals, flyer redesign, and prospect segmentation based on their stage in the decision funnel — to clarify the choice between the two formulas offered."},
+    "case1-pill3": {en:"Segmentation"},
+    "case2-h3": {en:"Automating international training campaigns"},
+    "case2-p": {en:"Built Python scripts connected to the Mailchimp API to segment contact lists and trigger personalized campaigns without repetitive manual work, for training programs reaching several hundred prospects."},
+    "case3-h3": {en:"Building tender proposals"},
+    "case3-p": {en:"Drafting, on behalf of Building Business, technical and financial proposals in response to tenders issued by public and private, national and international institutions, development agencies and NGOs — more than a dozen won since 2021, including Enabel (Niger, Guinea), the National Agency for Universal Telecommunications and Digital Services (ANSUTEN, Guinea), the National Office for Water and Sanitation (ONEA) and the West African Confederation of Financial Institutions (CIF-AO). Coordination of delivery and post-training follow-up once the contract is won."},
+    "case3-pill1": {en:"Technical writing"},
+    "case3-pill2": {en:"Coordination"},
+    "case3-pill3": {en:"Post-training follow-up"},
+    "case4-h3": {en:"Digital training sessions delivered to professionals"},
+    "case4-p": {en:"Design and delivery of 11 sessions on content marketing, social media strategy, email marketing and AI applied to digital marketing, for cohorts of professionals in continuing education."},
+    "case4-pill1": {en:"Andragogy"},
+    "case4-pill2": {en:"AI & marketing"},
+    "case4-pill3": {en:"Social media"},
+    "missions-eyebrow": {en:"Mandates & partners"},
+    "missions-h2": {en:"A sample of tenders won"},
+    "th-mission": {en:"Mandate"},
+    "th-beneficiaire": {en:"Beneficiary"},
+    "th-annee": {en:"Year"},
+    "mission1": {en:"Post-training follow-up for senior staff — management & communication"},
+    "org1": {en:"Enabel Niger — Sarraounia 2 Project"},
+    "mission2": {en:"ICT skills training for 130 students (Labé, Mamou, Conakry)"},
+    "org2": {en:"National Agency for Universal Telecommunications and Digital Services (ANSUTEN) — Guinea"},
+    "mission3": {en:"Odoo collaborative development environment & IT team training"},
+    "org3": {en:"National Office for Water and Sanitation (ONEA) — Burkina Faso"},
+    "mission4": {en:"Team building and skills development plan"},
+    "org4": {en:"West African Confederation of Financial Institutions (CIF-AO)"},
+    "mission5": {en:"Islamic finance training for governance bodies"},
+    "org5": {en:"WAQF High Authority — Niger"},
+    "mission6": {en:"IT capacity building in systems, networks & information security"},
+    "org6": {en:"National Agency for ICT Promotion — Burkina Faso"},
+    "outils-eyebrow": {en:"Toolkit"},
+    "outils-h2": {en:"What I use day to day"},
+    "tools-h4-1": {en:"AI & automation"},
+    "tools-h4-2": {en:"Digital & social media"},
+    "tools-h4-3": {en:"CMS & creation"},
+    "tools-h4-4": {en:"Quality & productivity"},
+    "presence-eyebrow": {en:"Proof, not just claims"},
+    "presence-h2": {en:"What I manage day to day"},
+    "presence-tag1": {en:"Website"},
+    "presence-p1": {en:"The firm's institutional website, which I administer via CMS (content, articles, updating training offers)."},
+    "presence-link1": {en:"View the site ↗"},
+    "presence-p2": {en:"The firm's official page — campaign visuals, session announcements, brand content."},
+    "presence-link2": {en:"View the page ↗"},
+    "presence-p3": {en:"LinkedIn company page — institutional communication and positioning for the firm."},
+    "presence-link3": {en:"View the page ↗"},
+    "footer-eyebrow": {en:"Let's talk"},
+    "footer-h2": {en:"Communication that holds up, and the systems to keep it running."},
+    "footer-p": {en:"Available for a role in institutional communication, digital marketing, or a consulting mandate — in Burkina Faso or elsewhere."},
+    "footmeta-updated": {en:"Updated · 2026"}
+  };
+
+  const originals = {};
+  document.querySelectorAll('[data-i18n]').forEach(function(el){
+    originals[el] = null;
+  });
+
+  function applyLang(lang){
+    document.documentElement.lang = lang;
+    document.querySelectorAll('[data-i18n]').forEach(function(el){
+      const key = el.getAttribute('data-i18n');
+      if(!el.dataset.frCache){ el.dataset.frCache = el.innerHTML; }
+      if(lang === 'fr'){
+        el.innerHTML = el.dataset.frCache;
+      } else if(translations[key] && translations[key].en){
+        el.innerHTML = translations[key].en;
+      }
+    });
+    document.querySelectorAll('.lang-switch button').forEach(function(btn){
+      btn.classList.toggle('active', btn.getAttribute('data-lang-btn') === lang);
+    });
+  }
+
+  document.querySelectorAll('.lang-switch button').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      applyLang(btn.getAttribute('data-lang-btn'));
+    });
+  });
+</script>
 
 </body>
 </html>
