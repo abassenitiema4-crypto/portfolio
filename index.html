@@ -1,11 +1,63 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Abasse Nitiema — Communication, Marketing Digital & Automatisation</title>
+<title>Abasse Nitiema, Communication, Marketing Digital & Automatisation</title>
 <meta name="description" content="Portfolio d'Abasse Nitiema, spécialiste en communication institutionnelle, marketing digital et automatisation par l'IA, basé à Ouagadougou, Burkina Faso.">
+<link rel="canonical" href="https://abassenitiema4-crypto.github.io/portfolio/">
+
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Abasse Nitiema, Communication, Marketing Digital & Automatisation">
+<meta property="og:description" content="Spécialiste en communication institutionnelle, marketing digital et automatisation par l'IA, basé à Ouagadougou, Burkina Faso. Responsable Communication chez Building Business (ISO 9001 / ISO 21001).">
+<meta property="og:url" content="https://abassenitiema4-crypto.github.io/portfolio/">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Abasse Nitiema, Communication, Marketing Digital & Automatisation">
+<meta name="twitter:description" content="Spécialiste en communication institutionnelle, marketing digital et automatisation par l'IA, basé à Ouagadougou, Burkina Faso.">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Abasse Nitiema",
+  "url": "https://abassenitiema4-crypto.github.io/portfolio/",
+  "email": "mailto:abassenitiema4@gmail.com",
+  "jobTitle": "Responsable Communication",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Ouagadougou",
+    "addressCountry": "BF"
+  },
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Building Business",
+    "url": "https://building-business.net/index.php/fr/",
+    "description": "Cabinet de conseil, formation et études certifié ISO 9001 et ISO 21001, présent au Burkina Faso, au Maroc et en Côte d'Ivoire."
+  },
+  "alumniOf": {
+    "@type": "EducationalOrganization",
+    "name": "Université Aube Nouvelle"
+  },
+  "knowsAbout": [
+    "Communication institutionnelle",
+    "Marketing digital",
+    "Automatisation par l'IA",
+    "Ingénierie de la formation",
+    "ISO 9001",
+    "ISO 21001",
+    "Rédaction d'appels d'offres",
+    "Automatisation no-code avec Make.com",
+    "Coaching et diagnostic d'équipe"
+  ],
+  "knowsLanguage": ["fr", "en"],
+  "sameAs": [
+    "https://linkedin.com/in/abasse-nitiema"
+  ]
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -250,6 +302,22 @@
   .tool-groups ul{ list-style:none; margin:0; padding:0; }
   .tool-groups li{ font-size:14px; color:var(--paper-dim); padding:5px 0; }
 
+  /* FAQ */
+  .faq-list{ display:flex; flex-direction:column; gap:1px; background:var(--line); border:1px solid var(--line); }
+  .faq-item{ background:var(--panel); }
+  .faq-item summary{
+    padding:22px 26px; cursor:pointer; list-style:none;
+    display:flex; align-items:center; justify-content:space-between; gap:20px;
+    font-family:'Fraunces', serif; font-size:17px; color:var(--paper);
+  }
+  .faq-item summary::-webkit-details-marker{ display:none; }
+  .faq-item summary::after{
+    content:"+"; font-family:'IBM Plex Mono', monospace; color:var(--sand); font-size:20px; flex-shrink:0;
+    transition: transform .2s ease;
+  }
+  .faq-item[open] summary::after{ transform:rotate(45deg); }
+  .faq-item .faq-a{ padding:0 26px 24px; color:var(--paper-dim); font-size:14.5px; max-width:70ch; }
+
   /* CONTACT / FOOTER */
   footer{ padding:80px 0 48px; }
   .contact-box{
@@ -280,6 +348,7 @@
       <a href="#missions" data-i18n="nav-missions">Missions</a>
       <a href="#outils" data-i18n="nav-outils">Outils</a>
       <a href="#presence" data-i18n="nav-presence">Présence</a>
+      <a href="#faq" data-i18n="nav-faq">FAQ</a>
     </nav>
     <div class="nav-right">
       <div class="lang-switch">
@@ -296,9 +365,9 @@
   <section class="hero first">
     <div class="wrap hero-grid">
       <div>
-        <div class="eyebrow">Abasse Nitiema — Ouagadougou, Burkina Faso</div>
+        <div class="eyebrow">Abasse Nitiema, Ouagadougou, Burkina Faso</div>
         <h1 data-i18n="hero-h1">Je conçois des messages qui portent, <em>puis je construis les systèmes</em> qui les diffusent sans épuiser l'équipe.</h1>
-        <p class="lead" data-i18n="hero-lead">Spécialiste en communication institutionnelle, marketing digital et automatisation par l'IA. Depuis 2019, je fais dialoguer la rigueur d'un cabinet certifié ISO avec les outils qui font gagner du temps — Python, API, assistants IA.</p>
+        <p class="lead" data-i18n="hero-lead">Spécialiste en communication institutionnelle, marketing digital et automatisation par l'IA. Depuis 2019, je fais dialoguer la rigueur d'un cabinet certifié ISO avec les outils qui font gagner du temps : Python, API, assistants IA.</p>
         <div class="hero-ctas">
           <a class="btn-primary" href="mailto:abassenitiema4@gmail.com" data-i18n="hero-cta-primary">Discuter d'une collaboration</a>
           <a class="btn-ghost" href="https://linkedin.com/in/abasse-nitiema" target="_blank" rel="noopener" data-i18n="hero-cta-linkedin">Profil LinkedIn ↗</a>
@@ -306,7 +375,7 @@
       </div>
 
       <div class="chain-card">
-        <div class="cap" data-i18n="chain-cap">Comment je travaille — une chaîne, pas des tâches isolées</div>
+        <div class="cap" data-i18n="chain-cap">Comment je travaille : une chaîne, pas des tâches isolées</div>
         <svg class="chain" viewBox="0 0 460 260" xmlns="http://www.w3.org/2000/svg">
           <path id="chainpath" d="M40,40 C120,40 90,120 170,120 S220,200 300,200 S380,120 420,120"
                 fill="none" stroke="rgba(242,239,233,0.18)" stroke-width="1.5" stroke-dasharray="3 5"/>
@@ -343,13 +412,13 @@
       <div>
         <div class="eyebrow" data-i18n="about-eyebrow">À propos</div>
         <h2 style="margin:14px 0 20px; font-size:28px;" data-i18n="about-h2">Un pied dans la rigueur institutionnelle, un pied dans l'outillage moderne.</h2>
-        <p data-i18n="about-p1">Depuis 2019, je pilote la communication du cabinet <strong>Building Business</strong> — conseil, formation et études, certifié <strong>ISO 9001</strong> et <strong>ISO 21001</strong>, présent au Burkina Faso, au Maroc et en Côte d'Ivoire.</p>
-        <p data-i18n="about-p2">Ce cadre m'a appris à écrire pour des partenaires exigeants — agences de développement, ministères, entreprises publiques — et à structurer des dossiers d'appels d'offres qui tiennent la route. En parallèle, j'ai construit ma propre pratique de l'automatisation : scripts Python, API Mailchimp, agents IA, pour que la partie répétitive du métier libère du temps pour la partie stratégique.</p>
-        <p data-i18n="about-p3">Titulaire d'un <strong>Master en communication digitale stratégique</strong> (2025), je continue à documenter cette double compétence — communication et systèmes — comme le fil conducteur de mon travail.</p>
+        <p data-i18n="about-p1">Depuis 2019, je pilote la communication du cabinet <strong>Building Business</strong>, cabinet de conseil, formation et études, certifié <strong>ISO 9001</strong> et <strong>ISO 21001</strong>, présent au Burkina Faso, au Maroc et en Côte d'Ivoire.</p>
+        <p data-i18n="about-p2">Ce cadre m'a appris à écrire pour des partenaires exigeants (agences de développement, ministères, entreprises publiques) et à structurer des dossiers d'appels d'offres qui tiennent la route. En parallèle, j'ai construit ma propre pratique de l'automatisation : scripts Python, API Mailchimp, agents IA, pour que la partie répétitive du métier libère du temps pour la partie stratégique.</p>
+        <p data-i18n="about-p3">Titulaire d'un <strong>Master en communication digitale stratégique</strong> (2025), je continue à documenter cette double compétence (communication et systèmes) comme le fil conducteur de mon travail.</p>
       </div>
       <div class="stat-list">
         <div class="stat"><div class="n">2019</div><div class="l" data-i18n="stat1-l">DÉBUT DE MON PARCOURS EN COMMUNICATION DIGITALE & INSTITUTIONNELLE</div></div>
-        <div class="stat"><div class="n">100+</div><div class="l" data-i18n="stat2-l">SESSIONS DE FORMATION COORDONNÉES — SUIVI QUALITÉ (2019–2026)</div></div>
+        <div class="stat"><div class="n">100+</div><div class="l" data-i18n="stat2-l">SESSIONS DE FORMATION COORDONNÉES, SUIVI QUALITÉ (2019-2026)</div></div>
         <div class="stat"><div class="n">10+</div><div class="l" data-i18n="stat3-l">APPELS D'OFFRES REMPORTÉS DEPUIS 2021</div></div>
         <div class="stat"><div class="n">11</div><div class="l" data-i18n="stat4-l">SESSIONS DE FORMATION ANIMÉES PERSONNELLEMENT</div></div>
       </div>
@@ -385,6 +454,7 @@
             <li data-i18n="p2-li3">Campagnes email pilotées par l'API Mailchimp</li>
             <li data-i18n="p2-li4">Workflows combinant Claude, ChatGPT & outils métier</li>
             <li data-i18n="p2-li5">Génération automatisée de documents (Word, Excel, slides)</li>
+            <li data-i18n="p2-li6">Scénarios d'automatisation no-code sur Make.com</li>
           </ul>
         </div>
         <div class="pillar">
@@ -396,6 +466,7 @@
             <li data-i18n="p3-li3">Montage de dossiers pour appels d'offres nationaux et internationaux</li>
             <li data-i18n="p3-li4">Connaissances pratiques ISO 9001 / ISO 21001 / ISO 29993</li>
             <li data-i18n="p3-li5">Audit qualité interne et externe</li>
+            <li data-i18n="p3-li6">Certification TeamBuilder Pro en cours (diagnostic et coaching d'équipe)</li>
           </ul>
         </div>
       </div>
@@ -415,8 +486,8 @@
         <div class="case">
           <div class="meta">2026<span class="org">Building Business</span></div>
           <div>
-            <h3 data-i18n="case1-h3">Campagne de promotion — Certification PMP®</h3>
-            <p data-i18n="case1-p">Conception de campagnes emailing HTML itératives (testées et affinées envoi après envoi), création des visuels Facebook, refonte du flyer et segmentation des prospects selon leur avancement dans le tunnel de décision — pour clarifier le choix entre les deux formules proposées.</p>
+            <h3 data-i18n="case1-h3">Campagne de promotion : Certification PMP®</h3>
+            <p data-i18n="case1-p">Conception de campagnes emailing HTML itératives (testées et affinées envoi après envoi), création des visuels Facebook, refonte du flyer et segmentation des prospects selon leur avancement dans le tunnel de décision, pour clarifier le choix entre les deux formules proposées.</p>
             <div class="pill-row">
               <span class="pill">Mailchimp HTML</span>
               <span class="pill">Facebook Ads</span>
@@ -442,7 +513,7 @@
           <div class="meta">2021–2026<span class="org">Building Business</span></div>
           <div>
             <h3 data-i18n="case3-h3">Constitution de dossiers d'appels d'offres</h3>
-            <p data-i18n="case3-p">Montage, pour le compte du cabinet Building Business, des propositions techniques et financières en réponse aux appels d'offres lancés par des institutions publiques et privées, nationales et internationales, des agences de développement et des ONG — plus d'une dizaine remportés depuis 2021, dont Enabel (Niger, Guinée), l'Agence Nationale du Service Universel des Télécommunications et du Numérique (ANSUTEN, Guinée), l'Office National de l'Eau et de l'Assainissement (ONEA) et la Confédération des Institutions Financières Afrique de l'Ouest (CIF-AO). Coordination de la mise en œuvre et du suivi post-formation une fois le marché remporté.</p>
+            <p data-i18n="case3-p">Montage, pour le compte du cabinet Building Business, des propositions techniques et financières en réponse aux appels d'offres lancés par des institutions publiques et privées, nationales et internationales, des agences de développement et des ONG : plus d'une dizaine remportés depuis 2021, dont Enabel (Niger, Guinée), l'Agence Nationale du Service Universel des Télécommunications et du Numérique (ANSUTEN, Guinée), l'Office National de l'Eau et de l'Assainissement (ONEA) et la Confédération des Institutions Financières Afrique de l'Ouest (CIF-AO). Coordination de la mise en œuvre et du suivi post-formation une fois le marché remporté.</p>
             <div class="pill-row">
               <span class="pill" data-i18n="case3-pill1">Rédaction technique</span>
               <span class="pill" data-i18n="case3-pill2">Coordination</span>
@@ -460,6 +531,19 @@
               <span class="pill" data-i18n="case4-pill1">Andragogie</span>
               <span class="pill" data-i18n="case4-pill2">IA & marketing</span>
               <span class="pill" data-i18n="case4-pill3">Réseaux sociaux</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="case">
+          <div class="meta">2023–2025<span class="org">Missions indépendantes</span></div>
+          <div>
+            <h3 data-i18n="case5-h3">Missions de conseil indépendantes en stratégie de communication digitale</h3>
+            <p data-i18n="case5-p">En parallèle de son poste chez Building Business, accompagnement de plusieurs organisations sur leur stratégie de communication : plan d'action pour accroître la visibilité d'une solution IA (Sustex Assistant), définition des axes stratégiques de positionnement et de développement de marché (MITIBTECH), cadre stratégique pour la communication institutionnelle (CEMAQUE), et conception-déploiement d'un plan stratégique digital (Building Capacity Institute).</p>
+            <div class="pill-row">
+              <span class="pill" data-i18n="case5-pill1">Conseil stratégique</span>
+              <span class="pill" data-i18n="case5-pill2">Positionnement de marque</span>
+              <span class="pill" data-i18n="case5-pill3">Communication digitale</span>
             </div>
           </div>
         </div>
@@ -482,18 +566,23 @@
         </thead>
         <tbody>
           <tr>
-            <td data-i18n="mission1">Suivi post-formation des cadres centraux — management & communication</td>
-            <td class="org" data-i18n="org1">Enabel Niger — Projet Sarraounia 2</td>
-            <td class="year">2026</td>
+            <td data-i18n="mission1">Sélection d'un bureau d'études pour la formation des partenaires du ministère de l'Enseignement supérieur, communication interne et externe</td>
+            <td class="org" data-i18n="org1">Enabel Niger, Projet Sarraounia 2</td>
+            <td class="year">2024</td>
+          </tr>
+          <tr>
+            <td data-i18n="mission7">Sélection d'un bureau d'études pour la formation des partenaires du ministère de l'Enseignement supérieur, management, leadership et coaching</td>
+            <td class="org" data-i18n="org7">Enabel Niger, Projet Sarraounia 2</td>
+            <td class="year">2024</td>
           </tr>
           <tr>
             <td data-i18n="mission2">Formation aux métiers TIC pour 130 étudiants (Labé, Mamou, Conakry)</td>
-            <td class="org" data-i18n="org2">Agence Nationale du Service Universel des Télécommunications et du Numérique (ANSUTEN) — Guinée</td>
+            <td class="org" data-i18n="org2">Agence Nationale du Service Universel des Télécommunications et du Numérique (ANSUTEN), Guinée</td>
             <td class="year">2026</td>
           </tr>
           <tr>
             <td data-i18n="mission3">Environnement de développement collaboratif Odoo & formation des équipes IT</td>
-            <td class="org" data-i18n="org3">Office National de l'Eau et de l'Assainissement (ONEA) — Burkina Faso</td>
+            <td class="org" data-i18n="org3">Office National de l'Eau et de l'Assainissement (ONEA), Burkina Faso</td>
             <td class="year">2026</td>
           </tr>
           <tr>
@@ -503,12 +592,12 @@
           </tr>
           <tr>
             <td data-i18n="mission5">Formation en finance islamique des instances de gouvernance</td>
-            <td class="org" data-i18n="org5">Haute Autorité du WAQF — Niger</td>
+            <td class="org" data-i18n="org5">Haute Autorité du WAQF, Niger</td>
             <td class="year">2023</td>
           </tr>
           <tr>
             <td data-i18n="mission6">Renforcement des capacités IT en système, réseau & sécurité informatique</td>
-            <td class="org" data-i18n="org6">Agence Nationale de Promotion des TIC — Burkina Faso</td>
+            <td class="org" data-i18n="org6">Agence Nationale de Promotion des TIC, Burkina Faso</td>
             <td class="year">2022</td>
           </tr>
         </tbody>
@@ -529,9 +618,10 @@
           <h4 data-i18n="tools-h4-1">IA & automatisation</h4>
           <ul>
             <li>Claude · ChatGPT</li>
+            <li>Claude Cowork</li>
             <li>Python · Playwright</li>
             <li>Mailchimp API</li>
-            <li>n8n / Zapier</li>
+            <li>Make.com · n8n / Zapier</li>
           </ul>
         </div>
         <div>
@@ -583,25 +673,119 @@
         <div class="pillar">
           <span class="tag">Facebook</span>
           <h3>Building Business</h3>
-          <p style="font-size:14.5px; color:var(--paper-dim); margin:0 0 16px;" data-i18n="presence-p2">Page officielle du cabinet — visuels de campagnes, annonces de sessions, contenus de marque.</p>
+          <p style="font-size:14.5px; color:var(--paper-dim); margin:0 0 16px;" data-i18n="presence-p2">Page officielle du cabinet : visuels de campagnes, annonces de sessions, contenus de marque.</p>
           <a class="btn-ghost" style="display:inline-flex;" href="https://web.facebook.com/buildingbusinessformation/?locale=fr_FR" target="_blank" rel="noopener" data-i18n="presence-link2">Voir la page ↗</a>
         </div>
         <div class="pillar">
           <span class="tag">LinkedIn</span>
           <h3>Building Business</h3>
-          <p style="font-size:14.5px; color:var(--paper-dim); margin:0 0 16px;" data-i18n="presence-p3">Page entreprise LinkedIn — communication institutionnelle et positionnement du cabinet.</p>
+          <p style="font-size:14.5px; color:var(--paper-dim); margin:0 0 16px;" data-i18n="presence-p3">Page entreprise LinkedIn : communication institutionnelle et positionnement du cabinet.</p>
           <a class="btn-ghost" style="display:inline-flex;" href="https://www.linkedin.com/company/buildingbusinessformation/?viewAsMember=true" target="_blank" rel="noopener" data-i18n="presence-link3">Voir la page ↗</a>
         </div>
       </div>
     </div>
   </section>
 
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow" data-i18n="faq-eyebrow">Questions fréquentes</div>
+          <h2 data-i18n="faq-h2">Ce qu'on me demande le plus souvent</h2>
+        </div>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item" open>
+          <summary data-i18n="faq-q1">Qui est Abasse Nitiema ?</summary>
+          <div class="faq-a" data-i18n="faq-a1">Abasse Nitiema est Responsable Communication chez Building Business, un cabinet de conseil, formation et études certifié ISO 9001 et ISO 21001, basé à Ouagadougou avec des bureaux à Casablanca et Abidjan. Il pilote la communication institutionnelle et digitale du cabinet depuis 2019 et développe en parallèle des automatisations basées sur l'IA pour les processus de communication et de formation.</div>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq-q2">Que fait un Responsable Communication dans un cabinet de conseil et formation ?</summary>
+          <div class="faq-a" data-i18n="faq-a2">Le rôle couvre la stratégie de communication institutionnelle et digitale, la gestion des campagnes publicitaires (Facebook, LinkedIn, TikTok), la rédaction de contenus, le suivi qualité pédagogique des sessions de formation, et la constitution de dossiers techniques pour les appels d'offres nationaux et internationaux.</div>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq-q3">Comment automatiser des campagnes de communication avec l'IA ?</summary>
+          <div class="faq-a" data-i18n="faq-a3">En combinant des scripts Python, l'API Mailchimp pour la segmentation et l'envoi, l'automatisation web via Playwright pour la saisie répétitive de données, et des assistants IA comme Claude ou ChatGPT pour la génération de contenu et de documents. L'objectif est de libérer du temps sur les tâches répétitives pour se concentrer sur la stratégie.</div>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq-q4">Quelles certifications qualité connaît Abasse Nitiema ?</summary>
+          <div class="faq-a" data-i18n="faq-a4">Il est titulaire d'une certification Lead Auditor ISO 9001 et maîtrise les exigences de l'ISO 21001 (management des organismes éducatifs), acquises dans le cadre de son rôle de propriétaire du processus Communication Digitale au sein du système de management intégré (SMI) de Building Business.</div>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq-q5">Comment monter un dossier d'appel d'offres pour une agence de développement ?</summary>
+          <div class="faq-a" data-i18n="faq-a5">Cela implique de structurer une proposition technique et financière conforme aux exigences du bailleur, de rassembler les pièces justificatives et attestations requises, et de coordonner la mise en œuvre après attribution, y compris le suivi post-formation. Abasse Nitiema a contribué à plus d'une dizaine de dossiers remportés depuis 2021, notamment auprès d'Enabel, de l'ANSUTEN et de l'ONEA.</div>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq-q6">Abasse Nitiema est-il disponible pour de nouvelles opportunités ?</summary>
+          <div class="faq-a" data-i18n="faq-a6">Oui. Il est ouvert à de nouvelles opportunités professionnelles en communication institutionnelle, marketing digital ou conseil, au Burkina Faso comme à l'international, y compris avec relocalisation.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Qui est Abasse Nitiema ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Abasse Nitiema est Responsable Communication chez Building Business, un cabinet de conseil, formation et études certifié ISO 9001 et ISO 21001, basé à Ouagadougou avec des bureaux à Casablanca et Abidjan. Il pilote la communication institutionnelle et digitale du cabinet depuis 2019 et développe en parallèle des automatisations basées sur l'IA pour les processus de communication et de formation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Que fait un Responsable Communication dans un cabinet de conseil et formation ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Le rôle couvre la stratégie de communication institutionnelle et digitale, la gestion des campagnes publicitaires (Facebook, LinkedIn, TikTok), la rédaction de contenus, le suivi qualité pédagogique des sessions de formation, et la constitution de dossiers techniques pour les appels d'offres nationaux et internationaux."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Comment automatiser des campagnes de communication avec l'IA ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "En combinant des scripts Python, l'API Mailchimp pour la segmentation et l'envoi, l'automatisation web via Playwright pour la saisie répétitive de données, et des assistants IA comme Claude ou ChatGPT pour la génération de contenu et de documents."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quelles certifications qualité connaît Abasse Nitiema ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Il est titulaire d'une certification Lead Auditor ISO 9001 et maîtrise les exigences de l'ISO 21001 (management des organismes éducatifs), acquises dans le cadre de son rôle de propriétaire du processus Communication Digitale au sein du système de management intégré (SMI) de Building Business."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Comment monter un dossier d'appel d'offres pour une agence de développement ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Cela implique de structurer une proposition technique et financière conforme aux exigences du bailleur, de rassembler les pièces justificatives et attestations requises, et de coordonner la mise en œuvre après attribution. Abasse Nitiema a contribué à plus d'une dizaine de dossiers remportés depuis 2021, notamment auprès d'Enabel, de l'ANSUTEN et de l'ONEA."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Abasse Nitiema est-il disponible pour de nouvelles opportunités ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui. Il est ouvert à de nouvelles opportunités professionnelles en communication institutionnelle, marketing digital ou conseil, au Burkina Faso comme à l'international, y compris avec relocalisation."
+        }
+      }
+    ]
+  }
+  </script>
+
   <footer id="contact">
     <div class="wrap">
       <div class="contact-box">
         <div class="eyebrow" style="justify-content:center;" data-i18n="footer-eyebrow">Discutons</div>
         <h2 data-i18n="footer-h2">Une communication qui tient la route, et les systèmes pour la faire vivre.</h2>
-        <p data-i18n="footer-p">Disponible pour un poste en communication institutionnelle, marketing digital ou un mandat de conseil — au Burkina Faso ou ailleurs.</p>
+        <p data-i18n="footer-p">Disponible pour un poste en communication institutionnelle, marketing digital ou un mandat de conseil, au Burkina Faso ou ailleurs.</p>
         <div class="contact-links">
           <a class="btn-primary" href="mailto:abassenitiema4@gmail.com">abassenitiema4@gmail.com</a>
           <a class="btn-ghost" href="https://wa.me/22672919005" target="_blank" rel="noopener">+226 72 91 90 05</a>
@@ -609,7 +793,7 @@
         </div>
       </div>
       <div class="foot-meta">
-        <span>Abasse Nitiema — Ouagadougou, Burkina Faso</span>
+        <span>Abasse Nitiema, Ouagadougou, Burkina Faso</span>
         <span data-i18n="footmeta-updated">Mis à jour · 2026</span>
       </div>
     </div>
@@ -626,12 +810,13 @@
     "nav-missions": {en:"Mandates"},
     "nav-outils": {en:"Tools"},
     "nav-presence": {en:"Online"},
+    "nav-faq": {en:"FAQ"},
     "nav-contact": {en:"Get in touch"},
     "hero-h1": {en:"I design messages that land, <em>then I build the systems</em> that spread them without burning out the team."},
-    "hero-lead": {en:"Institutional communication, digital marketing and AI-driven automation specialist. Since 2019, I've bridged the rigor of an ISO-certified firm with the tools that save time — Python, APIs, AI assistants."},
+    "hero-lead": {en:"Institutional communication, digital marketing and AI-driven automation specialist. Since 2019, I've bridged the rigor of an ISO-certified firm with the tools that save time: Python, APIs, AI assistants."},
     "hero-cta-primary": {en:"Let's talk about working together"},
     "hero-cta-linkedin": {en:"LinkedIn profile ↗"},
-    "chain-cap": {en:"How I work — a chain, not isolated tasks"},
+    "chain-cap": {en:"How I work: a chain, not isolated tasks"},
     "chain-strategie": {en:"Strategy"},
     "chain-strategie-sub": {en:"brief · audience"},
     "chain-contenu": {en:"Content"},
@@ -641,11 +826,11 @@
     "chain-mesure-sub": {en:"KPIs · iteration"},
     "about-eyebrow": {en:"About"},
     "about-h2": {en:"One foot in institutional rigor, one in modern tooling."},
-    "about-p1": {en:"Since 2019, I've led communication for Building Business — a consulting, training and studies firm certified <strong>ISO 9001</strong> and <strong>ISO 21001</strong>, present in Burkina Faso, Morocco and Côte d'Ivoire."},
-    "about-p2": {en:"That environment taught me to write for demanding partners — development agencies, ministries, public institutions — and to structure tender proposals that hold up. Alongside that, I built my own automation practice: Python scripts, the Mailchimp API, AI agents, so the repetitive part of the job frees up time for the strategic part."},
-    "about-p3": {en:"Holder of a <strong>Master's in strategic digital communication</strong> (2025), I keep documenting this dual skill set — communication and systems — as the throughline of my work."},
+    "about-p1": {en:"Since 2019, I've led communication for Building Business, a consulting, training and studies firm certified <strong>ISO 9001</strong> and <strong>ISO 21001</strong>, present in Burkina Faso, Morocco and Côte d'Ivoire."},
+    "about-p2": {en:"That environment taught me to write for demanding partners (development agencies, ministries, public institutions) and to structure tender proposals that hold up. Alongside that, I built my own automation practice: Python scripts, the Mailchimp API, AI agents, so the repetitive part of the job frees up time for the strategic part."},
+    "about-p3": {en:"Holder of a <strong>Master's in strategic digital communication</strong> (2025), I keep documenting this dual skill set (communication and systems) as the throughline of my work."},
     "stat1-l": {en:"START OF MY CAREER IN DIGITAL & INSTITUTIONAL COMMUNICATION"},
-    "stat2-l": {en:"TRAINING SESSIONS COORDINATED — QUALITY OVERSIGHT (2019–2026)"},
+    "stat2-l": {en:"TRAINING SESSIONS COORDINATED, QUALITY OVERSIGHT (2019-2026)"},
     "stat3-l": {en:"TENDERS WON SINCE 2021"},
     "stat4-l": {en:"TRAINING SESSIONS PERSONALLY FACILITATED"},
     "comp-eyebrow": {en:"What I do"},
@@ -664,6 +849,7 @@
     "p2-li3": {en:"Email campaigns driven by the Mailchimp API"},
     "p2-li4": {en:"Workflows combining Claude, ChatGPT & business tools"},
     "p2-li5": {en:"Automated document generation (Word, Excel, slides)"},
+    "p2-li6": {en:"No-code automation scenarios on Make.com"},
     "pillar3-tag": {en:"03 · Structure"},
     "pillar3-h3": {en:"Training engineering & quality"},
     "p3-li1": {en:"Design and delivery of continuing-education courses"},
@@ -671,15 +857,16 @@
     "p3-li3": {en:"Building proposals for national and international tenders"},
     "p3-li4": {en:"Working knowledge of ISO 9001 / ISO 21001 / ISO 29993"},
     "p3-li5": {en:"Internal and external quality audits"},
+    "p3-li6": {en:"TeamBuilder Pro certification in progress (team diagnostics & coaching)"},
     "real-eyebrow": {en:"Selected work"},
     "real-h2": {en:"A few concrete cases"},
-    "case1-h3": {en:"Promotional campaign — PMP® Certification"},
-    "case1-p": {en:"Design of iterative HTML email campaigns (tested and refined send after send), creation of Facebook visuals, flyer redesign, and prospect segmentation based on their stage in the decision funnel — to clarify the choice between the two formulas offered."},
+    "case1-h3": {en:"Promotional campaign: PMP® Certification"},
+    "case1-p": {en:"Design of iterative HTML email campaigns (tested and refined send after send), creation of Facebook visuals, flyer redesign, and prospect segmentation based on their stage in the decision funnel, to clarify the choice between the two formulas offered."},
     "case1-pill3": {en:"Segmentation"},
     "case2-h3": {en:"Automating international training campaigns"},
     "case2-p": {en:"Built Python scripts connected to the Mailchimp API to segment contact lists and trigger personalized campaigns without repetitive manual work, for training programs reaching several hundred prospects."},
     "case3-h3": {en:"Building tender proposals"},
-    "case3-p": {en:"Drafting, on behalf of Building Business, technical and financial proposals in response to tenders issued by public and private, national and international institutions, development agencies and NGOs — more than a dozen won since 2021, including Enabel (Niger, Guinea), the National Agency for Universal Telecommunications and Digital Services (ANSUTEN, Guinea), the National Office for Water and Sanitation (ONEA) and the West African Confederation of Financial Institutions (CIF-AO). Coordination of delivery and post-training follow-up once the contract is won."},
+    "case3-p": {en:"Drafting, on behalf of Building Business, technical and financial proposals in response to tenders issued by public and private, national and international institutions, development agencies and NGOs: more than a dozen won since 2021, including Enabel (Niger, Guinea), the National Agency for Universal Telecommunications and Digital Services (ANSUTEN, Guinea), the National Office for Water and Sanitation (ONEA) and the West African Confederation of Financial Institutions (CIF-AO). Coordination of delivery and post-training follow-up once the contract is won."},
     "case3-pill1": {en:"Technical writing"},
     "case3-pill2": {en:"Coordination"},
     "case3-pill3": {en:"Post-training follow-up"},
@@ -688,23 +875,30 @@
     "case4-pill1": {en:"Andragogy"},
     "case4-pill2": {en:"AI & marketing"},
     "case4-pill3": {en:"Social media"},
+    "case5-h3": {en:"Independent consulting engagements in digital communication strategy"},
+    "case5-p": {en:"Alongside his role at Building Business, advised several organizations on communication strategy: an action plan to grow visibility for an AI solution (Sustex Assistant), strategic positioning and market-development direction (MITIBTECH), a strategic framework for institutional communication (CEMAQUE), and the design and rollout of a digital strategic plan (Building Capacity Institute)."},
+    "case5-pill1": {en:"Strategic consulting"},
+    "case5-pill2": {en:"Brand positioning"},
+    "case5-pill3": {en:"Digital communication"},
     "missions-eyebrow": {en:"Mandates & partners"},
     "missions-h2": {en:"A sample of tenders won"},
     "th-mission": {en:"Mandate"},
     "th-beneficiaire": {en:"Beneficiary"},
     "th-annee": {en:"Year"},
-    "mission1": {en:"Post-training follow-up for senior staff — management & communication"},
-    "org1": {en:"Enabel Niger — Sarraounia 2 Project"},
+    "mission1": {en:"Selecting a firm to train Ministry of Higher Education partners, internal & external communication"},
+    "org1": {en:"Enabel Niger, Sarraounia 2 Project"},
+    "mission7": {en:"Selecting a firm to train Ministry of Higher Education partners, management, leadership & coaching"},
+    "org7": {en:"Enabel Niger, Sarraounia 2 Project"},
     "mission2": {en:"ICT skills training for 130 students (Labé, Mamou, Conakry)"},
-    "org2": {en:"National Agency for Universal Telecommunications and Digital Services (ANSUTEN) — Guinea"},
+    "org2": {en:"National Agency for Universal Telecommunications and Digital Services (ANSUTEN), Guinea"},
     "mission3": {en:"Odoo collaborative development environment & IT team training"},
-    "org3": {en:"National Office for Water and Sanitation (ONEA) — Burkina Faso"},
+    "org3": {en:"National Office for Water and Sanitation (ONEA), Burkina Faso"},
     "mission4": {en:"Team building and skills development plan"},
     "org4": {en:"West African Confederation of Financial Institutions (CIF-AO)"},
     "mission5": {en:"Islamic finance training for governance bodies"},
-    "org5": {en:"WAQF High Authority — Niger"},
+    "org5": {en:"WAQF High Authority, Niger"},
     "mission6": {en:"IT capacity building in systems, networks & information security"},
-    "org6": {en:"National Agency for ICT Promotion — Burkina Faso"},
+    "org6": {en:"National Agency for ICT Promotion, Burkina Faso"},
     "outils-eyebrow": {en:"Toolkit"},
     "outils-h2": {en:"What I use day to day"},
     "tools-h4-1": {en:"AI & automation"},
@@ -716,13 +910,27 @@
     "presence-tag1": {en:"Website"},
     "presence-p1": {en:"The firm's institutional website, which I administer via CMS (content, articles, updating training offers)."},
     "presence-link1": {en:"View the site ↗"},
-    "presence-p2": {en:"The firm's official page — campaign visuals, session announcements, brand content."},
+    "presence-p2": {en:"The firm's official page: campaign visuals, session announcements, brand content."},
     "presence-link2": {en:"View the page ↗"},
-    "presence-p3": {en:"LinkedIn company page — institutional communication and positioning for the firm."},
+    "presence-p3": {en:"LinkedIn company page: institutional communication and positioning for the firm."},
     "presence-link3": {en:"View the page ↗"},
+    "faq-eyebrow": {en:"Frequently asked"},
+    "faq-h2": {en:"What people usually ask"},
+    "faq-q1": {en:"Who is Abasse Nitiema?"},
+    "faq-a1": {en:"Abasse Nitiema is Communication Manager at Building Business, a consulting, training and studies firm certified ISO 9001 and ISO 21001, based in Ouagadougou with offices in Casablanca and Abidjan. He has led the firm's institutional and digital communication since 2019, alongside building AI-driven automations for communication and training processes."},
+    "faq-q2": {en:"What does a Communication Manager do at a consulting and training firm?"},
+    "faq-a2": {en:"The role covers institutional and digital communication strategy, running ad campaigns (Facebook, LinkedIn, TikTok), content writing, pedagogical quality oversight for training sessions, and building technical proposals for national and international tenders."},
+    "faq-q3": {en:"How do you automate communication campaigns with AI?"},
+    "faq-a3": {en:"By combining Python scripts, the Mailchimp API for segmentation and sending, Playwright-based web automation for repetitive data entry, and AI assistants like Claude or ChatGPT for content and document generation."},
+    "faq-q4": {en:"What quality certifications does Abasse Nitiema hold?"},
+    "faq-a4": {en:"He holds a Lead Auditor ISO 9001 certification and has mastery of ISO 21001 requirements (management of educational organizations), gained as process owner for Digital Communication within Building Business's integrated management system (IMS)."},
+    "faq-q5": {en:"How do you build a tender proposal for a development agency?"},
+    "faq-a5": {en:"It involves structuring a technical and financial proposal that meets the donor's requirements, gathering the required supporting documents and attestations, and coordinating delivery once the contract is awarded. Abasse Nitiema has contributed to more than a dozen tenders won since 2021, including with Enabel, ANSUTEN and ONEA."},
+    "faq-q6": {en:"Is Abasse Nitiema open to new opportunities?"},
+    "faq-a6": {en:"Yes. He is open to new professional opportunities in institutional communication, digital marketing, or consulting, in Burkina Faso or internationally, including relocation."},
     "footer-eyebrow": {en:"Let's talk"},
     "footer-h2": {en:"Communication that holds up, and the systems to keep it running."},
-    "footer-p": {en:"Available for a role in institutional communication, digital marketing, or a consulting mandate — in Burkina Faso or elsewhere."},
+    "footer-p": {en:"Available for a role in institutional communication, digital marketing, or a consulting mandate, in Burkina Faso or elsewhere."},
     "footmeta-updated": {en:"Updated · 2026"}
   };
 
